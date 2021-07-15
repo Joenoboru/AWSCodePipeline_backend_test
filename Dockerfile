@@ -1,4 +1,5 @@
-FROM node:12.18.3-alpine
+FROM node:10.13.0
+ARG NPM_RUN_SCRIPT
 ENV NPM_RUN_SCRIPT=${NPM_RUN_SCRIPT}
 COPY . /summa-api/
 WORKDIR  /summa-api/
