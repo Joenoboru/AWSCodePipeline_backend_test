@@ -1,5 +1,4 @@
-FROM 719522856123.dkr.ecr.ap-northeast-1.amazonaws.com/node-10.13.0:latest
-ARG NPM_RUN_SCRIPT
+FROM node:12.18.3-alpine
 ENV NPM_RUN_SCRIPT=${NPM_RUN_SCRIPT}
 COPY . /summa-api/
 WORKDIR  /summa-api/
