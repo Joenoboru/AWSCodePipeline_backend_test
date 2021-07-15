@@ -1,0 +1,32 @@
+{
+  "name": "Miracolo-business-api",
+  "version": "0.0.1-beta",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=production node app.js",
+    "staging": "NODE_ENV=staging node app.js",
+    "dev": "NODE_ENV=development nodemon app.js"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.0.0",
+    "ajv": "^6.12.0",
+    "aws-sdk": "^2.867.0",
+    "bcrypt": "^3.0.8",
+    "cryptr": "^6.0.1",
+    "hashids": "^2.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.20.8",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-jwt": "^3.6.0",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^7.4.0",
+    "moment": "^2.29.1",
+    "ngeohash": "^0.6.3",
+    "nodemon": "^2.0.2",
+    "pg": "^7.18.1",
+    "request": "^2.88.2",
+    "underscore": "^1.9.2",
+    "xlsx": "^0.16.9"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "GET /tag/list tag.list input data"
+}

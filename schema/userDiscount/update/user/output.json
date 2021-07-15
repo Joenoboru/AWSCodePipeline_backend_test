@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "PUT /userDiscount/:id UserDiscount.update output data",
+  "properties": {
+    "status": {
+      "type": "integer",
+      "description": "狀態(0: 未使用 1: 已使用 2: 作廢)"
+    }
+  }
+}

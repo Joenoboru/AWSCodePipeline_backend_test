@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "GET /activity/list Activity.list input data",
+  "properties": {
+    "limit": {
+      "type": "integer",
+      "description": "指定此次搜尋結果的回傳資料筆數"
+    },
+    "offset": {
+      "type": "integer",
+      "description": "指定要從第幾筆資料回傳"
+    },
+    "search": {
+      "type": "string",
+      "description": "找尋name、shop_name中含有相關文字的資料"
+    },
+    "sort": {
+      "type": "string",
+      "description": "指定資料排序方式（若按照距離，可用 distance asc/desc 排序）"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "所在位置經度"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "所在位置緯度"
+    },
+    "precision": {
+      "type": "number",
+      "string": "精確值"
+    }
+  },
+  "additionalProperties": true
+}

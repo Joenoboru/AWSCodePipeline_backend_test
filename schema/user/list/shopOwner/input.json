@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "GET /user/list User.list input data",
+  "properties": {
+    "limit": {
+      "type": "integer",
+      "description": "指定此次搜尋結果的回傳資料筆數"
+    },
+    "offset": {
+      "type": "integer",
+      "description": "指定要從第幾筆資料回傳"
+    },
+    "search": {
+      "type": "string",
+      "description": "找尋name、email、phone中含有相關文字的資料"
+    },
+    "area": {
+      "type": "string",
+      "description": "找尋city、address中含有相關文字的資料"
+    },
+    "sort": {
+      "type": "string",
+      "description": "指定資料排序方式"
+    },    
+    "gender": {
+      "type": "integer",
+      "description": "指定會員性別 1: 男, 2: 女"
+    },
+    "birth_day_start": {
+      "type": "string",
+      "description": "指定資料生日起始"
+    },
+    "birth_day_end": {
+      "type": "string",
+      "description": "指定資料生日結束"
+    }
+  },
+  "additionalProperties": true
+}

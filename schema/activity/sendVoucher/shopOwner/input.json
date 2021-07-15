@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "POST /activity/sendVoucher Activity.sendVoucher input data",
+  "properties": {
+    "activity_public_id": {
+      "type": "string",
+      "description": "活動編號"
+    },
+    "discount_public_id": {
+      "type": "string",
+      "description": "折扣編號"
+    },
+    "user_code": {
+      "type": "string",
+      "description": "會員條碼"
+    },
+    "shop_branch_public_id": {
+      "type": "string",
+      "description": "分店資訊公開編號"
+    },
+    "user_token": {
+      "type": "string",
+      "description": "會員授權Token"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "activity_public_id",
+    "discount_public_id",
+    "user_code",
+    "user_token"
+  ]
+}

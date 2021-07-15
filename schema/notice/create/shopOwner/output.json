@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "POST /notice Notice.create output data",
+  "properties": {
+    "total":{
+      "type": "integer",
+      "description": "預計發送訊息數量"
+    }
+  },
+  "additionalProperties": false
+} 

@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "PUT /notice Notice.update input data",
+  "properties": {
+    "read": {
+      "type": "integer",
+      "description": "訊息狀態（0: 未讀, 1: 已讀）",
+      "enum": [0, 1]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "read"
+  ]
+} 

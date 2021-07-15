@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "GET /notice/:id Notice.find output data",
+  "properties": {
+  	"id": {
+      "type": "integer",
+      "description": "訊息編號"
+  	},
+    "title": {
+      "type": "string",
+      "description": "訊息標題"
+    },
+    "content": {
+      "type": "string",
+      "description": "訊息內容"
+    },
+    "status": {
+      "type": "integer",
+      "description": "訊息狀態（0: 關閉, 1: 開啟）"
+    },
+    "read": {
+      "type": "integer",
+      "description": "已讀狀態（0: 未讀, 1: 已讀）"
+    },
+    "created_time": {
+      "type": "object",
+      "description": "資料新增時間"
+    },
+    "updated_time": {
+      "type": "object",
+      "description": "資料更新時間"
+    }
+  },
+  "additionalProperties": false
+} 

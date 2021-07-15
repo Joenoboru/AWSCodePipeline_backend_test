@@ -1,0 +1,259 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "PUT /activity Activity.update output data",
+  "properties": {
+    "public_id": {
+      "type": "string",
+      "description": "活動公開編號"
+    },
+    "shop_id": {
+      "type": "integer",
+      "description": "店家編號"
+    },
+    "name": {
+      "type": "string",
+      "description": "活動名稱"
+    },
+    "description": {
+      "type": "string",
+      "description": "活動敘述",
+      "nullable": true
+    },
+    "picture": {
+      "type": "array",
+      "description": "圖片資訊",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "圖片編號"
+          },
+          "type": {
+            "type": "integer",
+            "description": "圖片類型"
+          },
+          "url": {
+            "type": "string",
+            "description": "圖片url"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "tags": {
+      "type": "array",
+      "description": "標籤資訊",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "標籤編號"
+          },
+          "name": {
+            "type": "string",
+            "description": "標籤名稱"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "limit": {
+      "type": "integer",
+      "description": "參加活動次數限制"
+    },
+    "type_id": {
+      "type": "integer",
+      "description": "活動類型編號"
+    },
+    "class": {
+      "type": "integer",
+      "description": "活動類型分類"
+    },
+    "start_time": {
+      "type": "object",
+      "description": "活動開始時間",
+      "nullable": true
+    },
+    "end_time": {
+      "type": "object",
+      "description": "活動結束時間",
+      "nullable": true
+    },
+    "use_start_time": {
+      "type": "object",
+      "description": "折扣使用期限(開始)",
+      "nullable": true
+    },
+    "use_end_time": {
+      "type": "object",
+      "description": "折扣使用期限(結束)",
+      "nullable": true
+    },
+    "use_days": {
+      "type": "integer",
+      "description": "折扣可使用天數",
+      "nullable": true
+    },
+    "status": {
+      "type": "integer",
+      "description": "活動狀態(0: 關閉 1: 開啟）"
+    },
+    "share": {
+      "type": "integer",
+      "description": "分享次數"
+    },
+    "play": {
+      "type": "integer",
+      "description": "遊玩次數"
+    },
+    "view": {
+      "type": "integer",
+      "description": "瀏覽次數"
+    },
+    "issued_amount": {
+      "type": "integer",
+      "description": "折扣總發放次數"
+    },
+    "usage_amount": {
+      "type": "integer",
+      "description": "折扣總使用次數"
+    },
+    "discounts": {
+      "type": "array",
+      "description": "活動折扣一覽",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "折扣編號"
+          },
+          "public_id": {
+            "type": "string",
+            "description": "折扣公開編號"
+          },
+          "name": {
+            "type": "string",
+            "description": "折扣名稱"
+          },
+          "rate": {
+            "type": "integer",
+            "description": "折扣中獎機率"
+          },
+          "unlimit": {
+            "type": "integer",
+            "description": "折扣狀態(0:有限制數量 1: 無限制數量）"
+          },
+          "quantity": {
+            "type": "integer",
+            "description": "折扣數量"
+          },
+          "number": {
+            "type": "integer",
+            "description": "卷的數量"
+          },
+          "price": {
+            "type": "number",
+            "description": "項目金額"
+          },
+          "description": {
+            "type": "string",
+            "description": "使用說明",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "description": "折扣狀態(0: 關閉 1: 開啟 2: 刪除)"
+          },
+          "type": {
+            "type": "integer",
+            "description": "折扣類型（1:折扣 2:分享獎勵 3:沒中獎）"
+          },
+          "picture": {
+            "type": "array",
+            "description": "圖片資訊",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "description": "圖片編號"
+                },
+                "type": {
+                  "type": "integer",
+                  "description": "圖片類型"
+                },
+                "url": {
+                  "type": "string",
+                  "description": "圖片url"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "use_serial_num": {
+            "type": "integer",
+            "description": "流水號是否開啟(0: 關閉 1: 開啟）"
+          },
+          "serial_num_setting": {
+            "type": "object",
+            "description": "流水號設定",
+            "properties": {
+              "prefix": {
+                "type": "string",
+                "description": "流水號前綴",
+                "maxLength": 4
+              },
+              "length": {
+                "type": "number",
+                "description": "流水號長度",
+                "maximum": 8,
+                "minimum": 1
+              },
+              "start": {
+                "type": "number",
+                "description": "流水號起始",
+                "minimum": 1
+              },
+              "end": {
+                "type": "number",
+                "description": "流水號結束",
+                "maximum": 99999999
+              }
+            },
+            "additionalProperties": false,
+            "nullable": true
+          },
+          "notes": {
+            "type": "string",
+            "description": "備註",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "備註",
+      "nullable": true
+    },
+    "writeoff_type": {
+      "type": "integer",
+      "description": "商品卷核銷方式(0: QRcode 1: 快速)",
+      "enum": [0, 1]
+    },
+    "created_time": {
+      "type": "object",
+      "description": "資料新增時間"
+    },
+    "updated_time": {
+      "type": "object",
+      "description": "資料更新時間"
+    }
+  },
+  "additionalProperties": false
+} 

@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "PUT /notice Notice.update input data",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "訊息標題"
+    },
+    "content": {
+      "type": "string",
+      "description": "訊息內容"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "content"
+  ]
+} 

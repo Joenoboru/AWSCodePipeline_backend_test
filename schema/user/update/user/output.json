@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "PUT /User/:publicId User.update output data",
+  "properties": {
+    "public_id": {
+      "type": "string",
+      "description": "會員公開編號"
+    },
+    "type": {
+      "type": "integer",
+      "description": "會員類型（1: 系統管理者, 2: 商家, 3: 會員）"
+    },
+    "miracolo_id": {
+      "type": "string",
+      "description": "會員 Miracolo 編號"
+    },
+    "line_id": {
+      "type": "string",
+      "description": "會員 line 編號",
+      "nullable": true
+    },
+    "name": {
+      "type": "string",
+      "description": "會員姓名",
+      "nullable": true
+    },
+    "email": {
+      "type": "string",
+      "description": "會員電子信箱",
+      "nullable": true
+    },
+    "phone": {
+      "type": "string",
+      "description": "會員手機號碼",
+      "nullable": true
+    },
+    "birth_year": {
+      "type": "integer",
+      "description": "會員出生年",
+      "nullable": true
+    },
+    "birth_month": {
+      "type": "integer",
+      "description": "會員出生月",
+      "nullable": true
+    },
+    "birth_day": {
+      "type": "integer",
+      "description": "會員出生日",
+      "nullable": true
+    },
+    "gender": {
+      "type": "integer",
+      "description": "會員性別（1: 男, 2: 女）"
+    },
+    "city": {
+      "type": "string",
+      "description": "會員居住縣市",
+      "nullable": true
+    },
+    "picture": {
+      "type": "string",
+      "description": "會員照片",
+      "nullable": true
+    },
+    "code": {
+      "type": "string",
+      "description": "會員條碼"
+    },
+    "passport_name": {
+      "type": "string",
+      "description": "護照姓名",
+      "nullable": true
+    },
+    "emergency_contact": {
+      "type": "string",
+      "description": "緊急聯絡人姓名",
+      "nullable": true
+    },
+    "emergency_number": {
+      "type": "string",
+      "description": "緊急聯絡人電話",
+      "nullable": true
+    },
+    "custom_id": {
+      "type": "string",
+      "description": "客戶編號",
+      "nullable": true
+    },
+    "notes": {
+      "type": "string",
+      "description": "額外資訊",
+      "nullable": true
+    },
+    "address": {
+      "type": "string",
+      "description": "會員地址",
+      "nullable": true
+    },
+    "created_time": {
+      "type": "object",
+      "description": "資料新增時間"
+    },
+    "updated_time": {
+      "type": "object",
+      "description": "資料更新時間"
+    }
+  },
+  "additionalProperties": false
+}

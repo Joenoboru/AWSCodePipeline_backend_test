@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "GET /activity/list Activity.list input data",
+  "properties": {
+    "limit": {
+      "type": "integer",
+      "description": "指定此次搜尋結果的回傳資料筆數"
+    },
+    "offset": {
+      "type": "integer",
+      "description": "指定要從第幾筆資料回傳"
+    },
+    "search": {
+      "type": "string",
+      "description": "找尋name、shop_name中含有相關文字的資料"
+    },
+    "sort": {
+      "type": "string",
+      "description": "指定資料排序方式"
+    }
+  },
+  "additionalProperties": true
+}

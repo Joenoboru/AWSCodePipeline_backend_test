@@ -1,0 +1,9 @@
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: <TASK_DEFINITION>
+        LoadBalancerInfo: 
+          ContainerName: "summa-api-staging" 
+          ContainerPort: 3333
+          

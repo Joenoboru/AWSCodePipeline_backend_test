@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "GET /activityType/list ActivityType.list output data",
+  "properties": {
+    "total": {
+      "type": "integer",
+      "description": "搜尋結果的總數"
+    },
+    "data": {
+      "type": "array",
+      "description": "多個活動類型資料",
+      "items": {
+        "type": "object",
+        "description": "活動類型資料",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "活動類型編號"
+          },
+          "name": {
+            "type": "string",
+            "description": "活動類型名稱"
+          },
+          "status": {
+            "type": "integer",
+            "description": "活動類型是否開放"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+      
+  },
+  "additionalProperties": false
+} 

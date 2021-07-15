@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "POST /notice Notice.create input data",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "訊息標題"
+    },
+    "content": {
+      "type": "string",
+      "description": "訊息內容"
+    },
+    "recipient": {
+      "type": "object",
+      "description": "收件人名單資訊",
+      "properties": {
+        "user_public_ids": {
+          "type": "array",
+          "description": "收件人名單列表",
+          "maxItems": 300,
+          "items": {
+            "type": "string",
+            "description": "會員公開編號"
+          }
+        },
+        "all": {
+          "type": "integer",
+          "description": "是否寄送給所有訂閱此商店的會員（0：否, 1：是）",
+          "enum": [0, 1]
+        }
+      },
+      "additionalProperties": false
+    },
+    "mode": {
+      "type": "object",
+      "description": "寄送方式",
+      "properties": {
+        "notice": {
+          "type": "integer",
+          "description": "是否寄送到 summa 通知（0：否，1：是）",
+          "enum": [0, 1]
+        },
+        "email": {
+          "type": "integer",
+          "description": "是否寄送 Email 通知（0：否，1：是）",
+          "enum": [0, 1]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "content",
+    "recipient",
+    "mode"
+  ]
+} 

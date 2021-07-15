@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "PUT /tag/:id tag.update output data",
+  "properties": {
+    "shop_id": {
+      "type": "integer",
+      "description": "店家編號",
+      "nullable": true
+    },
+    "name": {
+      "type": "string",
+      "description": "標籤名稱"
+    },
+    "type": {
+      "type": "integer",
+      "description": "標籤類型(0: 活動標籤 1: 會員標籤)"
+    },
+    "created_time": {
+      "type": "object",
+      "description": "資料新增時間"
+    },
+    "updated_time": {
+      "type": "object",
+      "description": "資料更新時間"
+    }
+  },
+  "additionalProperties": false
+}

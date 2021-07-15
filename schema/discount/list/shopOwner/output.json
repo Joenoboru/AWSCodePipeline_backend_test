@@ -1,0 +1,94 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "GET /discount/list discount.list output data",
+  "properties": {
+    "total": {
+      "type": "integer",
+      "description": "搜尋結果的總數"
+    },
+    "data": {
+      "type": "array",
+      "description": "多個商品卷資料",
+      "items": {
+        "type": "object",
+        "description": "商品卷資料",
+        "properties": {
+          "public_id": {
+            "type": "string",
+            "description": "折扣公開編號"
+          },
+          "name": {
+            "type": "string",
+            "description": "商品卷名稱"
+          },
+          "rate": {
+            "type": "integer",
+            "description": "商品卷中獎機率"
+          },
+          "unlimit": {
+            "type": "integer",
+            "description": "商品卷狀態(0:有限制數量 1: 無限制數量）"
+          },
+          "quantity": {
+            "type": "integer",
+            "description": "商品卷數量"
+          },
+          "description": {
+            "type": "string",
+            "description": "使用說明",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "description": "商品卷狀態"
+          },
+          "type": {
+            "type": "integer",
+            "description": "商品卷類型（1:折扣 2:分享獎勵 3:沒中獎 4:商品卷）"
+          },
+          "issued_amount": {
+            "type": "integer",
+            "description": "商品卷總發放次數"
+          },
+          "usage_amount": {
+            "type": "integer",
+            "description": "商品卷總使用次數"
+          },
+          "discount_number": {
+            "type": "integer",
+            "description": "劵的數量"
+          },
+          "price": {
+            "type": "number",
+            "description": "價格"
+          },
+          "number": {
+            "type": "integer",
+            "description": "卷的數量"
+          },
+          "notes": {
+            "type": "string",
+            "description": "備註",
+            "nullable": true
+          },
+          "activity_public_id": {
+            "type": "string",
+            "description": "活動公開編號"
+          },
+          "activity_name": {
+            "type": "string",
+            "description": "活動名稱"
+          },
+          "activity_type_id": {
+            "type": "integer",
+            "description": "活動類型"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+      
+  },
+  "additionalProperties": false
+} 

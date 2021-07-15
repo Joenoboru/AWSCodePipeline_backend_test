@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "GET /userDiscount/list UserDiscount.list output data",
+  "properties": {
+    "total": {
+      "type": "integer",
+      "description": "搜尋結果的總數"
+    },
+    "data": {
+      "type": "array",
+      "description": "使用者折扣列表",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "會員擁有折扣的編號"
+          },
+          "shop_name": {
+            "type": "string",
+            "description": "店家名稱"
+          },
+          "shop_logo": {
+            "type": "string",
+            "description": "商家logo",
+            "nullable": true
+          },
+          "activity_id": {
+            "type": "integer",
+            "description": "活動編號"
+          },
+          "discount_id": {
+            "type": "integer",
+            "description": "折扣編號"
+          },
+          "discount_name": {
+            "type": "string",
+            "description": "折扣名稱"
+          },
+          "start_time": {
+            "type": "object",
+            "description": "開始使用時間",
+            "nullable": true
+          },
+          "end_time": {
+            "type": "object",
+            "description": "結束使用時間",
+            "nullable": true
+          },
+          "use_time": {
+            "type": "object",
+            "description": "實際使用時間",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "description": "狀態(0: 未使用 1: 已使用 2: 作廢)"
+          },
+          "code": {
+            "type": "string",
+            "description": "折扣條碼"
+          },
+          "created_time": {
+            "type": "object",
+            "description": "資料新增時間"
+          },
+          "updated_time": {
+            "type": "object",
+            "description": "資料更新時間"
+          },
+          "picture_url": {
+            "type": "string",
+            "description": "圖片url",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }    
+   	}
+  },
+  "additionalProperties": false
+}

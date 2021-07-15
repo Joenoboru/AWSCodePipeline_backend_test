@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "POST /User/login User.login input data",
+  "properties": {
+    "code": {
+      "type": "string",
+      "description": "Miracolo 登入回傳的 code",
+      "minLength": 10
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "code"
+  ]
+}

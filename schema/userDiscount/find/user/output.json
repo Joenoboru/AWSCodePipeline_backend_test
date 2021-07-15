@@ -1,0 +1,140 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "GET /userDiscount/:id UserDiscount.find output data",
+  "properties": {
+    "activity_id": {
+      "type": "integer",
+      "description": "活動編號"
+    },
+    "discount_id": {
+      "type": "integer",
+      "description": "折扣編號"
+    },
+    "discount_name": {
+      "type": "string",
+      "description": "折扣名稱"
+    },
+    "start_time": {
+      "type": "object",
+      "description": "開始使用時間",
+      "nullable": true
+    },
+    "end_time": {
+      "type": "object",
+      "description": "結束使用時間",
+      "nullable": true
+    },
+    "use_time": {
+      "type": "object",
+      "description": "實際使用時間",
+      "nullable": true
+    },
+    "status": {
+      "type": "integer",
+      "description": "狀態(0: 未使用 1: 已使用 2: 作廢)"
+    },
+    "code": {
+      "type": "string",
+      "description": "折扣條碼"
+    },
+    "serial_num": {
+      "type": "string",
+      "description": "優惠券流水編號",
+      "nullable": true
+    },
+    "shop_info": {
+      "type": "object",
+      "description": "店家資訊",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "商店名稱"
+        },
+        "category": {
+          "type": "integer",
+          "description": "店家類型"
+        },
+        "address": {
+          "type": "string",
+          "description": "店家地址",
+          "nullable": true
+        },
+        "web": {
+          "type": "string",
+          "description": "店家網址",
+          "nullable": true
+        },
+        "description": {
+          "type": "string",
+          "description": "敘述",
+          "nullable": true
+        },
+        "tel": {
+          "type": "string",
+          "description": "店家聯絡電話",
+          "nullable": true
+        },
+        "logo": {
+          "type": "string",
+          "description": "店家logo",
+          "nullable": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "activity_info": {
+      "type": "object",
+      "description": "活動資訊",
+      "properties": {
+        "public_id": {
+          "type": "string",
+          "description": "活動公開編號"
+        },
+        "name": {
+          "type": "string",
+          "description": "活動名稱"
+        },
+        "class": {
+          "type": "integer",
+          "description": "活動類型分類"
+        },
+        "writeoff_type": {
+          "type": "integer",
+          "description": "商品卷核銷方式(0: QRcode 1:快速)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "discount_info": {
+      "type": "object",
+      "description": "項目資訊",
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "敘述",
+          "nullable": true
+        },
+        "type": {
+          "type": "integer",
+          "description": "折扣類型（1:折扣 2:分享獎勵 3:沒中獎 4:商品）"
+        },
+        "picture_url": {
+          "type": "string",
+          "description": "圖片url",
+          "nullable": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "created_time": {
+      "type": "object",
+      "description": "資料新增時間"
+    },
+    "updated_time": {
+      "type": "object",
+      "description": "資料更新時間"
+    }
+  },
+  "additionalProperties": false 	
+}

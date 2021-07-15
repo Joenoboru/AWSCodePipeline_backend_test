@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "PUT /shopBranch/:public_id shopBranch.update input data",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "分店名稱"
+    },
+    "status": {
+      "type": "integer",
+      "description": "分店狀態(0: 關閉 1: 開啟",
+      "enum": [0, 1]
+    }
+  },
+  "additionalProperties": false
+} 
