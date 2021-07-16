@@ -1,0 +1,19 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 7
+    },
+    "auditLog": "logs/fm/.29ab7f432c75fb0bc5d27133241f7915fde803ef-audit.json",
+    "files": [
+        {
+            "date": 1624326003057,
+            "name": "logs/fm/2021-06-22.error.log",
+            "hash": "d935a7d88e8fd695e866ea545e3ba96b"
+        },
+        {
+            "date": 1624408490107,
+            "name": "logs/fm/2021-06-23.error.log",
+            "hash": "0ee72a30e6bd5c503287e722a8ce6b30"
+        }
+    ]
+}

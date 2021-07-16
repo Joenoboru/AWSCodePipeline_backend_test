@@ -1,0 +1,12 @@
+2021-06-11T16:00:10.449Z-info: "Executing (default): SELECT `id` FROM `employees` AS `Employee` WHERE `Employee`.`email` = 'joe_tseng@mirai-network.com' AND `Employee`.`status` = 1 LIMIT 1;"
+
+2021-06-11T16:00:10.488Z-info: "Executing (default): SELECT `message_id` AS `id`, `contents`, `type`, `msgkey`, `is_read` AS `isRead`, `create_at` AS `createdAt`, `link` FROM `message` AS `Message` WHERE `Message`.`email` = 'joe_tseng@mirai-network.com' ORDER BY `Message`.`create_at` DESC LIMIT 0, 20;"
+
+2021-06-11T16:00:10.494Z-info: "Executing (default): SELECT `message_id` AS `id`, `contents`, `type`, `msgkey`, `is_read` AS `isRead`, `create_at` AS `createdAt`, `link`, count(*) AS `count` FROM `message` AS `Message` WHERE `Message`.`email` = 'joe_tseng@mirai-network.com' AND `Message`.`is_read` = false;"
+
+2021-06-11T16:35:29.241Z-info: "Executing (default): SELECT `id` FROM `employees` AS `Employee` WHERE `Employee`.`email` = 'joe_tseng@mirai-network.com' AND `Employee`.`status` = 1 LIMIT 1;"
+
+2021-06-11T16:35:29.284Z-info: "Executing (default): SELECT `message_id` AS `id`, `contents`, `type`, `msgkey`, `is_read` AS `isRead`, `create_at` AS `createdAt`, `link` FROM `message` AS `Message` WHERE `Message`.`email` = 'joe_tseng@mirai-network.com' ORDER BY `Message`.`create_at` DESC LIMIT 0, 20;"
+
+2021-06-11T16:35:29.289Z-info: "Executing (default): SELECT `message_id` AS `id`, `contents`, `type`, `msgkey`, `is_read` AS `isRead`, `create_at` AS `createdAt`, `link`, count(*) AS `count` FROM `message` AS `Message` WHERE `Message`.`email` = 'joe_tseng@mirai-network.com' AND `Message`.`is_read` = false;"
+

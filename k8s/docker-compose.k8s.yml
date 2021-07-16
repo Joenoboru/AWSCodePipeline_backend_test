@@ -1,0 +1,31 @@
+version: "2"
+
+services:
+    wf_backend:
+        image: wf_backend
+        environment:
+            - APP_URL=http://localhost:3001
+            - PORT=3000
+            - DB_CONNECTION=mariadb
+            - DB_HOST=122.116.21.4
+            - DB_PORT=3306
+            - DB_USER=naomi
+            - DB_PASSWORD=pso2020
+            - DB_DATABASE=mirai-network.com
+            - DB_COMMON_DATABASE=mirai_wf
+            - SESSION_DB_CONNECTION=mariadb
+            - SESSION_DB_HOST=122.116.21.4
+            - SESSION_DB_PORT=3306
+            - SESSION_DB_USER=naomi
+            - SESSION_DB_PASSWORD=pso2020
+            - SESSION_DB_DATABASE=mirai_wf
+            - SESSION_TIME=7200
+            - CLIENT_ID=16885432641-4nmr6fefgs2r3lja5h43fgn6md8gt3l6.apps.googleusercontent.com
+            - GOOGLE_CLIENT_ID=16885432641-v12qh4upahggpvl7vfngo75n7qvpnnvt.apps.googleusercontent.com
+            - GOOGLE_CLIENT_SECRET=Bj9Aab4tfaJR-v2HgP85yPxJ
+            - GOOGLE_CALLBACK=http://localhost:3001/auth/google/callback
+        ports:
+            - "3001:3000"
+        command: node ./bin/www
+        labels:
+            kompose.service.type: LoadBalancer
