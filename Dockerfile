@@ -1,7 +1,15 @@
-FROM node:10.13.0
-ARG NPM_RUN_SCRIPT
-ENV NPM_RUN_SCRIPT=${NPM_RUN_SCRIPT}
-COPY . /summa-api/
-WORKDIR  /summa-api/
+FROM node:8.11-alpine
+
+WORKDIR /usr/src/app
+
+ARG NODE_ENV
+ENV NODE_ENV $NODE_ENV
+
+COPY package*.json /usr/src/app/
 RUN npm install
-CMD npm run ${NPM_RUN_SCRIPT:-start}
+
+COPY . /usr/src/app
+
+ENV PORT 5000
+EXPOSE $PORT
+CMD [ "npm", "start" ]

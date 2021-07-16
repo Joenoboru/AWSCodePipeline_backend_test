@@ -12,6 +12,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
+      - docker build --build-arg NPM_RUN_SCRIPT=$NPM_RUN_SCRIPT -t $IMAGE_REPO_NAME:$IMAGE_TAG .
       - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG      
   post_build:
     commands:
