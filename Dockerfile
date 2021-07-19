@@ -1,10 +1,10 @@
 FROM node:12.18.3-alpine
-RUN apk add git
-# ENV NODE_ENV production
-WORKDIR /usr/src/app
-COPY . /usr/src/app
-RUN yarn install --production --silient
-CMD [ "node", "./bin/www" ]
+ARG NPM_RUN_SCRIPT
+ENV NPM_RUN_SCRIPT=${NPM_RUN_SCRIPT}
+COPY . /summa-api/
+WORKDIR  /summa-api/
+RUN npm install
+CMD npm run ${NPM_RUN_SCRIPT:-start}
 
 
 
