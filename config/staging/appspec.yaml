@@ -1,9 +1,0 @@
-Resources:
-  - TargetService:
-      Type: AWS::ECS::Service
-      Properties:
-        TaskDefinition: <TASK_DEFINITION>
-        LoadBalancerInfo: 
-          ContainerName: "cicd-test-joe" 
-          ContainerPort: 3000
-          
