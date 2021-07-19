@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+    redis-db:
+        image: redis
+        restart: on-failure
+    backend:
+        image: wf_backend:latest
+        depends_on:
+            - redis-db
+        deploy:
+            replicas: 2
+            #placement:
+            #  max_replicas_per_node: 1
+            update_config:
+                parallelism: 1
+                delay: 10s
+            restart_policy:
+                condition: on-failure
+        links:
+            - "redis-db:redis-db"
+        volumes:
+            - C:/logs:/usr/src/app/logs
+        env_file:
+            - ./fm-prod.env
+        # ports:
+        #     - "3000:3000"
+        # command: node ./bin/www
+    docker-fm:
+        image: nginx:alpine
+        build: .
+        ports:
+            - 80:80
+            - 443:443
+        volumes:
+            - C:/ssl:/ssl
+            - ./nginx.conf:/etc/nginx/nginx.conf
+        links:
+            - "backend:backend"

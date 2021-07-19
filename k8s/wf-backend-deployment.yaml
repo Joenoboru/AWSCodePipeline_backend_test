@@ -1,0 +1,86 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: C:\kompose\kompose.exe -f .\docker-compose.k8s.yml convert
+    kompose.service.type: LoadBalancer
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: wf-backend
+  name: wf-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: wf-backend
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: C:\kompose\kompose.exe -f .\docker-compose.k8s.yml convert
+        kompose.service.type: LoadBalancer
+        kompose.version: 1.21.0 (992df58d8)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: wf-backend
+    spec:
+      containers:
+      - args:
+        - node
+        - ./bin/www
+        env:
+        - name: APP_URL
+          value: http://localhost:3001
+        - name: CLIENT_ID
+          value: 16885432641-4nmr6fefgs2r3lja5h43fgn6md8gt3l6.apps.googleusercontent.com
+        - name: DB_COMMON_DATABASE
+          value: mirai_wf
+        - name: DB_CONNECTION
+          value: mariadb
+        - name: DB_DATABASE
+          value: mirai-network.com
+        - name: DB_HOST
+          value: 122.116.21.4
+        - name: DB_PASSWORD
+          value: pso2020
+        - name: DB_PORT
+          value: "3306"
+        - name: DB_USER
+          value: naomi
+        - name: GOOGLE_CALLBACK
+          value: http://localhost:3001/auth/google/callback
+        - name: GOOGLE_CLIENT_ID
+          value: 16885432641-v12qh4upahggpvl7vfngo75n7qvpnnvt.apps.googleusercontent.com
+        - name: GOOGLE_CLIENT_SECRET
+          value: Bj9Aab4tfaJR-v2HgP85yPxJ
+        - name: PORT
+          value: "3000"
+        - name: SESSION_DB_CONNECTION
+          value: mariadb
+        - name: SESSION_DB_DATABASE
+          value: mirai_wf
+        - name: SESSION_DB_HOST
+          value: 122.116.21.4
+        - name: SESSION_DB_PASSWORD
+          value: pso2020
+        - name: SESSION_DB_PORT
+          value: "3306"
+        - name: SESSION_DB_USER
+          value: naomi
+        - name: SESSION_TIME
+          value: "7200"
+        image: wf_backend
+        imagePullPolicy: "Never"
+        name: wf-backend
+        ports:
+        - containerPort: 3000
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
+      restartPolicy: Always
+      serviceAccountName: ""
+      volumes: null
+status: {}
