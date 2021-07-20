@@ -9,7 +9,7 @@
         "logDriver": "awslogs",
         "secretOptions": null,
         "options": {
-          "awslogs-group": "/ecs/AWSCodeDeployRoleForECS",
+          "awslogs-group": "/ecs/cicdtest",
           "awslogs-region": "ap-northeast-1",
           "awslogs-stream-prefix": "ecs"
         }
@@ -54,7 +54,7 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "cicd"
+      "name": "cicidtest"
     }
   ],
   "placementConstraints": [],
@@ -64,8 +64,8 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-1:719522856123:task-definition/AWSCodeDeployRoleForECS:1",
-  "family": "AWSCodeDeployRoleForECS",
+  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-1:719522856123:task-definition/cicdtest:5",
+  "family": "cicdtest",
   "requiresAttributes": [
     {
       "targetId": null,
@@ -122,7 +122,7 @@
   ],
   "networkMode": "awsvpc",
   "cpu": "256",
-  "revision": 1,
+  "revision": 5,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
