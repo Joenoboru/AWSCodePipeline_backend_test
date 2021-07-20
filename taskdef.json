@@ -54,7 +54,7 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "cicdtest"
+      "name": "cicd-test-joe"
     }
   ],
   "placementConstraints": [],
