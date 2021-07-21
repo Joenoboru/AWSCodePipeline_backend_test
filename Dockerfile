@@ -1,4 +1,4 @@
-FROM node:12.18.3-alpine
+FROM 719522856123.dkr.ecr.ap-northeast-1.amazonaws.com/node:latest
 RUN apk add git
 # ENV NODE_ENV production
 WORKDIR /usr/src/app
